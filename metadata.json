@@ -1,0 +1,6 @@
+{
+  "name": "১১ তারিখ — The Day I Left Home",
+  "description": "A cinematic personal journey landing page chronicling leaving home in Bangladesh for Saudi Arabia on the 11th.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
