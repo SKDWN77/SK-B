@@ -17,7 +17,7 @@ import { StoryEditorModal } from './components/StoryEditorModal';
 export default function App() {
   const [config, setConfig] = useState<JourneyConfig>(() => {
     try {
-      const saved = localStorage.getItem('shakil_journey_config');
+      const saved = localStorage.getItem('sk_live_journey_config_v3');
       if (saved) {
         return JSON.parse(saved);
       }
@@ -33,7 +33,7 @@ export default function App() {
   const handleSaveConfig = (updated: JourneyConfig) => {
     setConfig(updated);
     try {
-      localStorage.setItem('shakil_journey_config', JSON.stringify(updated));
+      localStorage.setItem('sk_live_journey_config_v3', JSON.stringify(updated));
     } catch {
       // ignore
     }

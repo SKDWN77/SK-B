@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#FF0000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <g id="sk-logo-emblem" filter="url(#subtle-glow)">
+    <!-- Red Diamond base (rounded square rotated 45 degrees) -->
+    <rect
+      x="146"
+      y="146"
+      width="220"
+      height="220"
+      rx="46"
+      ry="46"
+      fill="#FF0000"
+      transform="rotate(45 256 256)"
+    />
+
+    <!-- Lower protruding red lobe of the S -->
+    <path
+      d="M 214 286
+         C 208 322 214 360 252 360
+         C 288 360 292 322 286 286
+         Z"
+      fill="#FF0000"
+    />
+
+    <!-- Main Stylized White S Shape -->
+    <!-- Modeled directly from 20260701_082909.png -->
+    <path
+      d="M 292 208
+         C 292 172 264 152 232 152
+         C 192 152 162 182 162 226
+         C 162 264 188 286 226 300
+         C 264 314 282 328 282 350
+         C 282 374 260 392 230 392
+         C 196 392 172 372 158 350
+         L 118 376
+         C 140 416 182 440 232 440
+         C 288 440 332 402 332 350
+         C 332 308 298 284 258 270
+         C 224 258 210 246 210 228
+         C 210 212 224 198 244 198
+         C 262 198 278 208 288 222
+         Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Bottom sweep cutting cleanly across the right corner -->
+    <path
+      d="M 276 338
+         C 296 322 322 304 354 288
+         C 362 304 358 322 342 340
+         C 324 360 298 372 272 378
+         L 264 354
+         C 278 348 294 340 306 330
+         Z"
+      fill="#FFFFFF"
+    />
+
+    <!-- Circled 'B' Badge at lower-left -->
+    <g id="circled-b" transform="translate(172, 354)">
+      <!-- White outer gap / halo -->
+      <circle cx="0" cy="0" r="26" fill="#FFFFFF" />
+      <!-- Red circular fill -->
+      <circle cx="0" cy="0" r="21" fill="#FF0000" />
+      <!-- White letter B -->
+      <text
+        x="0"
+        y="7.5"
+        text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="22"
+        font-weight="900"
+        fill="#FFFFFF"
+      >B</text>
+    </g>
+  </g>
+</svg>

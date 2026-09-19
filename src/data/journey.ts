@@ -1,11 +1,11 @@
 import { JourneyConfig, TimelineItem, MemoryPhoto, ThenNowData } from '../types';
 
 export const INITIAL_JOURNEY_CONFIG: JourneyConfig = {
-  name: "Shakil",
-  nameBangla: "শাকিল",
-  departureDate: "11 April 2024",
-  departureDateBangla: "১১ এপ্রিল ২০২৪",
-  departureIsoDate: "2024-04-11T18:30:00+06:00",
+  name: "SK Shakil Ahammed",
+  nameBangla: "এস কে শাকিল আহম্মেদ",
+  departureDate: "11 July 2026",
+  departureDateBangla: "১১ জুলাই ২০২৬",
+  departureIsoDate: "2026-07-11T01:30:00",
   departureDayNumber: "11",
   departureDayNumberBangla: "১১",
   fromCountry: "Bangladesh",
@@ -18,8 +18,8 @@ export const INITIAL_JOURNEY_CONFIG: JourneyConfig = {
   toCity: "Riyadh",
   toCityBangla: "রিয়াদ",
   toFlag: "🇸🇦",
-  websiteTitle: "১১ তারিখ — যেদিন বাড়ি ছেড়ে দূর দেশে পাড়ি দিলাম",
-  englishSubtitle: "The Day I Left Home",
+  websiteTitle: "SK Live journey",
+  englishSubtitle: "SK Live Journey • The Day I Left Home",
   heroTagline: "একটা নতুন জীবনের শুরু…",
   heroStoryText: "সেদিন শুধু একটি বাড়ি ছেড়ে আসিনি, পেছনে রেখে এসেছিলাম আমার পরিচিত পৃথিবী, পরিবার, আপন মানুষ আর অসংখ্য স্মৃতি।",
   quoteBengali: "বাড়ি থেকে দূরে থাকা মানে বাড়িকে ভুলে যাওয়া নয়। বরং দূরে গেলেই বোঝা যায়— বাড়ি আসলে কতটা আপন।",

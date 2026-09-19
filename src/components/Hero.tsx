@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { Plane, ChevronDown, Calendar, MapPin, Sparkles } from 'lucide-react';
 import { JourneyConfig } from '../types';
+import { Logo } from './Logo';
 
 interface HeroProps {
   config: JourneyConfig;
@@ -178,6 +179,17 @@ export const Hero: React.FC<HeroProps> = ({ config, useBengaliDigits }) => {
 
       {/* Main Content Area */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex-1 flex flex-col items-center justify-center">
+        {/* Brand Logo & Live Badge */}
+        <div className="mb-4 flex flex-col items-center group">
+          <div className="relative transition-transform duration-300 group-hover:scale-110">
+            <Logo className="w-16 h-16 sm:w-20 sm:h-20" withGlow={true} />
+          </div>
+          <div className="mt-2.5 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-mono tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+            <span className="font-semibold tracking-wider">SK LIVE JOURNEY</span>
+          </div>
+        </div>
+
         {/* Subtitle / Intro Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(255,255,255,0.03)] hover:border-amber-500/30 transition-all">
           <Sparkles className="w-3.5 h-3.5 text-amber-400 animate-pulse" />

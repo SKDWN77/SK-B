@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Compass, ArrowUp } from 'lucide-react';
 import { JourneyConfig } from '../types';
+import { Logo } from './Logo';
 
 interface FooterProps {
   config: JourneyConfig;
@@ -19,14 +20,17 @@ export const Footer: React.FC<FooterProps> = ({ config }) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           {/* Brand & Story tag */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="font-serif-bn font-bold text-amber-400 text-lg">
-                {config.departureDayNumberBangla} তারিখ
-              </span>
-              <span className="text-xs text-neutral-400 font-sans">•</span>
-              <span className="text-xs text-neutral-300 font-sans tracking-wide">
-                {config.englishSubtitle}
-              </span>
+            <div className="flex items-center gap-3 mb-2">
+              <Logo className="w-8 h-8" withGlow={true} />
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-neutral-100 text-base font-sans tracking-wide">
+                  SK Live journey
+                </span>
+                <span className="text-xs text-neutral-400 font-sans">•</span>
+                <span className="text-xs text-amber-300 font-serif-bn">
+                  {config.departureDateBangla}
+                </span>
+              </div>
             </div>
             <p className="text-xs text-neutral-400 font-sans-bn">
               একটি জীবনের গল্প — ফেলে আসা ভিটেমাটি থেকে নতুন স্বপ্নের দেশে

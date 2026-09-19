@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Volume2, VolumeX, Edit3, Compass, Menu, X } from 'lucide-react';
 import { JourneyConfig } from '../types';
 import { ambientSound } from '../utils/sound';
+import { Logo } from './Logo';
 
 interface NavbarProps {
   config: JourneyConfig;
@@ -57,19 +58,18 @@ export const Navbar: React.FC<NavbarProps> = ({
           href="#hero"
           className="group flex items-center gap-3 focus:outline-none"
         >
-          <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-600/10 border border-amber-500/30 flex items-center justify-center group-hover:border-amber-400 transition-colors shadow-[0_0_15px_rgba(245,158,11,0.15)]">
-            <span className="font-serif-bn font-bold text-amber-300 text-lg leading-none">
-              {config.departureDayNumberBangla}
-            </span>
-            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-amber-400 animate-ping opacity-75" />
-            <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-amber-400" />
+          <div className="relative flex items-center justify-center group-hover:scale-105 transition-transform">
+            <Logo className="w-10 h-10" withGlow={true} />
           </div>
           <div className="flex flex-col text-left">
-            <span className="text-sm sm:text-base font-semibold text-neutral-100 tracking-wide font-sans-bn group-hover:text-amber-200 transition-colors">
-              {config.departureDayNumberBangla} তারিখের স্মৃতি
+            <span className="text-sm sm:text-base font-bold text-neutral-100 tracking-wide font-sans group-hover:text-amber-300 transition-colors flex items-center gap-2">
+              <span>SK Live journey</span>
+              <span className="px-1.5 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/40 text-[10px] font-mono tracking-normal uppercase">
+                Live
+              </span>
             </span>
-            <span className="text-[11px] text-neutral-400 font-sans tracking-wider hidden sm:block">
-              {config.fromFlag} {config.fromCityBangla} → {config.toFlag} {config.toCityBangla}
+            <span className="text-[11px] text-neutral-400 font-sans-bn tracking-normal hidden sm:block">
+              {config.nameBangla} • {config.departureDateBangla}
             </span>
           </div>
         </a>

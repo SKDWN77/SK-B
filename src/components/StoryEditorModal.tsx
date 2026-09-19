@@ -3,6 +3,7 @@ import { X, Save, RotateCcw, Check, Sparkles } from 'lucide-react';
 import { JourneyConfig } from '../types';
 import { INITIAL_JOURNEY_CONFIG } from '../data/journey';
 import { toBengaliNumber } from '../utils/formatters';
+import { Logo } from './Logo';
 
 interface StoryEditorModalProps {
   isOpen: boolean;
@@ -87,16 +88,17 @@ export const StoryEditorModal: React.FC<StoryEditorModalProps> = ({
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-5 border-b border-white/10 mb-6">
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300">
-              <Sparkles className="w-5 h-5" />
-            </div>
+          <div className="flex items-center gap-3">
+            <Logo className="w-10 h-10" withGlow={true} />
             <div>
-              <h3 className="text-xl font-bold font-serif-bn text-neutral-100">
-                গল্পের তথ্য পরিবর্তন করুন
+              <h3 className="text-xl font-bold font-serif-bn text-neutral-100 flex items-center gap-2">
+                <span>গল্পের তথ্য পরিবর্তন করুন</span>
+                <span className="text-xs font-mono font-normal px-2 py-0.5 rounded-full bg-red-500/20 text-red-300 border border-red-500/40">
+                  SK Live
+                </span>
               </h3>
               <p className="text-xs text-neutral-400 font-sans">
-                Customize the name, dates, locations, and personal message in real time
+                Customize name, departure date, journey routes, and personal thoughts
               </p>
             </div>
           </div>
@@ -122,7 +124,7 @@ export const StoryEditorModal: React.FC<StoryEditorModalProps> = ({
                 value={formData.nameBangla}
                 onChange={(e) => handleChange('nameBangla', e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white focus:outline-none focus:border-amber-400 transition-colors"
-                placeholder="যেমন: শাকিল"
+                placeholder="যেমন: এস কে শাকিল আহম্মেদ"
                 required
               />
             </div>
@@ -136,7 +138,7 @@ export const StoryEditorModal: React.FC<StoryEditorModalProps> = ({
                 value={formData.name}
                 onChange={(e) => handleChange('name', e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white focus:outline-none focus:border-amber-400 transition-colors"
-                placeholder="e.g. Shakil"
+                placeholder="e.g. SK Shakil Ahammed"
                 required
               />
             </div>
@@ -166,7 +168,7 @@ export const StoryEditorModal: React.FC<StoryEditorModalProps> = ({
                 value={formData.departureDateBangla}
                 onChange={(e) => handleChange('departureDateBangla', e.target.value)}
                 className="w-full px-3.5 py-2.5 rounded-xl bg-black/40 border border-white/10 text-white focus:outline-none focus:border-amber-400 transition-colors"
-                placeholder="১১ এপ্রিল ২০২৪"
+                placeholder="১১ জুলাই ২০২৬"
               />
             </div>
           </div>
